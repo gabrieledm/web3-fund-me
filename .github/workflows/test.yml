@@ -23,7 +23,7 @@ jobs:
       - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@v1
         with:
-          version: nightly
+          version: stable
 
       - name: Show Forge version
         run: |
@@ -33,6 +33,11 @@ jobs:
         run: |
           forge fmt --check
         id: fmt
+
+      - name: Install dependencies
+        run: |
+          make install
+        id: install
 
       - name: Run Forge build
         run: |
