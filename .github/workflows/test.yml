@@ -36,8 +36,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          make remove && \
-          make install
+          make remove && make install
         id: install
 
       - name: Run Forge build
