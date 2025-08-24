@@ -34,16 +34,6 @@ jobs:
           forge fmt --check
         id: fmt
 
-      - name: Install dependencies
-        run: |
-          make remove && make install
-        id: install
-
-      - name: Run Forge build
-        run: |
-          forge build --sizes
-        id: build
-
       - name: Run Forge tests
         run: |
           forge test -vvv
